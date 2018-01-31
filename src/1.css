@@ -1,0 +1,34 @@
+body{
+    background-image: url(assets/images/background/green_grass.jpg);
+    padding-top: 50px;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.home{
+    background-image: url(assets/images/background/2.jpg);
+}
+.about{
+    background-image: url(assets/images/background/4.jpg);
+    background-size: 100% 100%;
+}
+.examples{
+    background-image: url(assets/images/background/2.jpg);
+    background-size: 100% 100%;
+    color: white;
+}
+.contacts{
+    background-image: url(assets/images/background/4.jpg);
+    background-size: 100% 100%;
+}
+.foto{
+    width: 90%;
+    margin: 0 auto;
+}
+.main_page{
+    color: white;
+}
+.footer{
+    font-size: 20px;
+}
+
+
