@@ -34,3 +34,15 @@ render(
    <App/>,
     document.getElementById("app")
 );
+
+function sendForm(e){
+    let keyBox = document.form1.input1;
+    let val = keyBox.value;
+    if(val.length<6){
+        alert ("Недопустимая длина строки");
+        e.preventDefault();
+    } else 
+        alert ("Отправка разрешена");
+}
+let sendButton = document.form1.btn1;
+sendButton.addEventListener("click", sendForm);
