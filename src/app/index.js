@@ -47,3 +47,24 @@ function sendForm(e){
 }
 let sendButton = document.form1.btn1;
 sendButton.addEventListener("click", sendForm);
+
+
+//borderColor
+let keyBox = document.form1.input1;
+//обработка потери фокуса
+function onblur(e) {
+    //получаем его значение и образаем все пробелы
+    let text = keyBox.value.trim();
+    if(text ==="")
+        keyBox.style.borderColor = "red";
+    else
+        keyBox.style.borderColor = "green";
+}
+
+//получение фокуса
+function onfocus(e) {
+    //установка цвета границ поля
+    keyBox.style.borderColor = "blue";
+}
+keyBox.addEventListener("blur", onblur);
+keyBox.addEventListener("focus", onfocus);
