@@ -40,6 +40,7 @@ function sendForm(e){
     let val = keyBox.value;
     if(val.length<6){
         alert ("Недопустимая длина строки");
+        document.form1.reset();
         e.preventDefault();
     } else 
         alert ("Отправка разрешена");
