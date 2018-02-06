@@ -49,7 +49,7 @@ let sendButton = document.form1.btn1;
 sendButton.addEventListener("click", sendForm);
 
 
-//borderColor
+//borderColor input1
 let keyBox = document.form1.input1;
 //обработка потери фокуса
 function onblur(e) {
@@ -62,9 +62,18 @@ function onblur(e) {
 }
 
 //получение фокуса
-function onfocus(e) {
+function onfocus() {
     //установка цвета границ поля
     keyBox.style.borderColor = "blue";
 }
 keyBox.addEventListener("blur", onblur);
 keyBox.addEventListener("focus", onfocus);
+
+//borderColor input2
+let keyBox1 = document.form2.input2;
+//получение фокуса
+function onfocus1() {
+    //установка цвета границ поля
+    keyBox1.style.borderColor = "blue";
+}
+keyBox1.addEventListener("focus", onfocus1);
