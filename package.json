@@ -16,10 +16,17 @@
   "dependencies": {
     "babel-core": "^6.26.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-intl": "^2.4.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "babel": {
-    "presets": ["es2017", "react", "stage-2"]
+    "presets": [
+      "es2017",
+      "react",
+      "stage-2"
+    ]
   },
   "devDependencies": {
     "babel-loader": "^7.1.2",
