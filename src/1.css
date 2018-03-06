@@ -31,5 +31,19 @@ body{
     font-size: 20px;
     color: white;
 }
+.rating{
+    display: flex;
+}
+.rating-item{
+    width: 40px;
+    height: 40px;
+    background-color: orange;
+    border: 2px solid #7f7f7f;
+    cursor: pointer;
+    text-align: center;
+}
+.rating-item.active{
+    background-color: #77FFFF;
+}
 
 
