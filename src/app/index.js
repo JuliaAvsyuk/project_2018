@@ -5,9 +5,7 @@ import { Header } from './components/Header';
 import { Portfolio } from './components/Portfolio';
 import { Contacts } from './components/Contacts';
 
-
 class App extends React.Component{
-
     render(){
         return (
             <div className="container">
@@ -77,3 +75,63 @@ function onfocus1() {
     keyBox1.style.borderColor = "blue";
 }
 keyBox1.addEventListener("focus", onfocus1);
+
+//rating
+let rating = document.querySelector('.rating'),
+    ratingItem = document.querySelectorAll('.rating-item');
+
+rating.onclick = function(e){
+    let target = e.target;
+    if(target.classList.contains('rating-item')){
+        removeClass(ratingItem,'current-active');
+        target.classList.add('active','current-active');
+    }
+};
+
+rating.onmouseover = function(e) {
+    let target = e.target;
+    if(target.classList.contains('rating-item')){
+        removeClass(ratingItem,'active');
+        target.classList.add('active');
+        mouseOverActiveClass(ratingItem)
+    }
+};
+rating.onmouseout = function(){
+    addClass(ratingItem,'active');
+    mouseOutActiveClass(ratingItem);
+};
+
+function removeClass(arr) {
+    for(let i = 0, iLen = arr.length; i <iLen; i ++) {
+        for(let j = 1; j < arguments.length; j ++) {
+            ratingItem[i].classList.remove(arguments[j]);
+        }
+    }
+}
+function addClass(arr) {
+    for(let i = 0, iLen = arr.length; i <iLen; i ++) {
+        for(let j = 1; j < arguments.length; j ++) {
+            ratingItem[i].classList.add(arguments[j]);
+        }
+    }
+}
+
+function mouseOverActiveClass(arr){
+    for(let i = 0, iLen = arr.length; i < iLen; i++) {
+        if(arr[i].classList.contains('active')){
+            break;
+        }else {
+            arr[i].classList.add('active');
+        }
+    }
+}
+
+function mouseOutActiveClass(arr) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i].classList.contains('current-active')) {
+            break;
+        } else {
+            arr[i].classList.remove('active');
+        }
+    }
+}
