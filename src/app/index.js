@@ -33,7 +33,7 @@ render(
     document.getElementById("app")
 );
 
-//login
+//form0 login
 function sendForm0(e){
     let keyBox = document.form0.input0;
     let val = keyBox.value;
@@ -47,7 +47,7 @@ function sendForm0(e){
 let sendButton0 = document.form0.btn0;
 sendButton0.addEventListener("click", sendForm0);
 
-
+//form1 comments
 function sendForm(e){
     let keyBox = document.form1.input1;
     let val = keyBox.value;
