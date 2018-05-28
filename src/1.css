@@ -45,5 +45,10 @@ body{
 .rating-item.active{
     background-color: #77FFFF;
 }
-
+#form0{
+    color: black;
+}
+#log{
+    color: white;
+}
 
