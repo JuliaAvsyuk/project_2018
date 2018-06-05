@@ -6,40 +6,30 @@ import { Portfolio } from './components/Portfolio';
 import { Contacts } from './components/Contacts';
 
 class App extends React.Component {
-    constructor(){
-        super();
-        this.state={
-            homeLink: "Home"
-        };
-    }
-
-    onGreet(){
-        alert("Hello everybody!!");
-    }
-
-    onChangeLinkName(newName){
-        this.setState({
-            homeLink: newName
-        });
-    }
-
     render(){
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-xs-10 col-xs-offset-1">
-                        <Header homeLink={this.state.homeLink} />
+                    <div className="col-xs-2">
+                        <Header homeLink={"Header"} />
                     </div>
                 </div>
-                <hr/>
+
                 <div className="row">
-                    <div className="col-xs-10 col-xs-offset-1">
-                        <Home  name={"Max"}
-                               initialAge={27}
-                               greet={this.onGreet}
-                               changeLink={this.onChangeLinkName.bind(this)}
-                               initialLinkName={this.state.homeLink}
-                        />
+                    <div className="col-xs-2">
+                        <Home homeLink={"Home"}/>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-xs-2">
+                        <Contacts homeLink={"Contacts"}/>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="col-xs-2">
+                        <Portfolio homeLink={"Portfolio"}/>
                     </div>
                 </div>
             </div>

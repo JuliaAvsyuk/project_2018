@@ -1,58 +1,31 @@
 import React from "react";
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 export class Home extends React.Component {
-    constructor(props){
+    constructor(){
         super();
-        this.state = {
-            age: props.initialAge,
-            status: 0,
-            homeLink: props.initialLinkName
+        this.state={
+            homeLink: "Home"
         };
-        setTimeout(()=> {
-            this.setState({
-                status: 1
-            });
-        }, 3000);
     }
-
-    onMakeOlder(){
-        this.setState({
-            age: this.state.age + 3
-        });
-    }
-
-    onChangeLink(){
-        this.props.changeLink(this.state.homeLink);
-    }
-
-    onHandleChange(event){
-        this.setState({
-            homeLink:event.target.value
-        });
-    }
-
     render(){
         return(
-            <div>
-                <p>Hello! My friend! =)</p>
-                <p>Your name is {this.props.name}, your age is {this.state.age}</p>
-                <hr/>
-                <p>Status: {this.state.status}</p>
-                <button onClick={()=> this.onMakeOlder()} className="btn btn-primary">Make me older!</button>
-                <hr/>
-                <button onClick={this.props.greet} className="btn btn-primary">Greet!</button>
-                <hr/>
-                <input type="text" value={this.state.homeLink} onChange={(event) => this.onHandleChange(event)} />
-                <button onClick={this.onChangeLink.bind(this)} className="btn btn-primary">Change Link!</button>
-            </div>
+            <nav className="navbar navbar-default">
+                <div className="container">
+                    <div className="navbar-header">
+                        <ul className="nav navbar-nav">
+                            <li><a href="#">{this.state.homeLink}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         );
     }
 }
 
-Home.propTypes = {
-    initialAge: PropTypes.number,
-    name: PropTypes.string,
-    greet: PropTypes.func,
-    initialLinkName: PropTypes.string
-};
+// Home.propTypes = {
+//     initialAge: PropTypes.number,
+//     name: PropTypes.string,
+//     greet: PropTypes.func,
+//     initialLinkName: PropTypes.string
+// };
