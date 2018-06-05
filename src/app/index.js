@@ -1,37 +1,53 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Home } from './components/Home';
 import { Header } from './components/Header';
+import { Home } from './components/Home';
 import { Portfolio } from './components/Portfolio';
 import { Contacts } from './components/Contacts';
 
-class App extends React.Component{
+class App extends React.Component {
+    constructor(){
+        super();
+        this.state={
+            homeLink: "Home"
+        };
+    }
+
+    onGreet(){
+        alert("Hello everybody!!");
+    }
+
+    onChangeLinkName(newName){
+        this.setState({
+            homeLink: newName
+        });
+    }
     render(){
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-xs-3">
-                        <Home />
+                    <div className="col-xs-10 col-xs-offset-1">
+                        <Header homeLink={this.state.homeLink} />
                     </div>
-                    <div className="col-xs-3">
-                        <Header />
-                    </div>
-                    <div className="col-xs-3">
-                        <Portfolio />
-                    </div>
-                    <div className="col-xs-3">
-                        <Contacts />
+                </div>
+                <hr/>
+                <div className="row">
+                    <div className="col-xs-10 col-xs-offset-1">
+                        <Home name={"Max"}
+                              initialAge={27}
+                              greet={this.onGreet}
+                              changeLink={this.onChangeLinkName.bind(this)}
+                              initialLinkName={this.state.homeLink}
+                        />
                     </div>
                 </div>
             </div>
         );
     }
 }
+render(<App />,
+    document.getElementById("app"));
 
-render(
-   <App/>,
-    document.getElementById("app")
-);
 
 //form0 login
 function sendForm0(e){
