@@ -10,25 +10,16 @@ class App extends React.Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-xs-2">
+                    <div className="col-xs-3">
                         <Header homeLink={"Header"} />
                     </div>
-                </div>
-
-                <div className="row">
-                    <div className="col-xs-2">
+                    <div className="col-xs-3">
                         <Home homeLink={"Home"}/>
                     </div>
-                </div>
-
-                <div className="row">
-                    <div className="col-xs-2">
+                    <div className="col-xs-3">
                         <Contacts homeLink={"Contacts"}/>
                     </div>
-                </div>
-
-                <div className="row">
-                    <div className="col-xs-2">
+                    <div className="col-xs-3">
                         <Portfolio homeLink={"Portfolio"}/>
                     </div>
                 </div>
