@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Header } from './components/Header';
-import { Home } from './components/Home';
 import { Portfolio } from './components/Portfolio';
+import { Home } from './components/Home';
+import { SingIn } from './components/Sing In';
 import { Contacts } from './components/Contacts';
 
 class App extends React.Component {
@@ -11,16 +11,16 @@ class App extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-xs-3">
-                        <Header homeLink={"Header"} />
+                        <Home />
                     </div>
                     <div className="col-xs-3">
-                        <Home homeLink={"Home"}/>
+                        <Contacts />
                     </div>
                     <div className="col-xs-3">
-                        <Contacts homeLink={"Contacts"}/>
+                        <Portfolio />
                     </div>
                     <div className="col-xs-3">
-                        <Portfolio homeLink={"Portfolio"}/>
+                        <SingIn />
                     </div>
                 </div>
             </div>
