@@ -1,5 +1,5 @@
 import React from "react";
-export class Portfolio extends React.Component{
+export class SingIn extends React.Component{
 
     render(){
         return(
@@ -7,7 +7,7 @@ export class Portfolio extends React.Component{
                 <div className="container">
                     <div className="navbar-header">
                         <ul className="nav navbar-nav">
-                            <li><a href="#">Sing In</a></li>
+                            <li><a href="#">SingIn</a></li>
                         </ul>
                     </div>
                 </div>
