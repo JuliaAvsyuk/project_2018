@@ -7,23 +7,28 @@ import { Home } from './components/Home';
 import { SingIn } from './components/Sing In';
 import { Contacts } from './components/Contacts';
 import { Root } from './components/Root';
+import { Forms } from './components/Forms';
 
 class App extends React.Component {
+
+
     render(){
         return (
-            <Router>
-                <div>
-                    <Root>
-                        <Switch>
-                            <Route exact path="/" component={Home} />
-                            <Route path="/portfolio" component={Portfolio} />
-                            <Route path="/signIn" component={SingIn} />
-                            <Route path="/contacts" component={Contacts} />
-                            <Route path="/home" component={Home} />
-                        </Switch>
-                    </Root>
-                </div>
-            </Router>
+            <div>
+                <Router>
+                    <div>
+                        <Root>
+                            <Switch>
+                                <Route exact path="/" component={Home} />
+                                <Route path="/portfolio" component={Portfolio} />
+                                <Route path="/signIn" component={SingIn} />
+                                <Route path="/contacts" component={Contacts} />
+                                <Route path="/home" component={Home} />
+                            </Switch>
+                        </Root>
+                    </div>
+                </Router>
+            </div>
         );
     }
 }
@@ -31,19 +36,19 @@ render(<App />,
     document.getElementById("app"));
 
 
-//form0 login
-function sendForm0(e){
-    let keyBox = document.form0.input0;
-    let val = keyBox.value;
-    if(val.length<10){
-        alert ("Недопустимая длина строки");
-        document.form0.reset();
-        e.preventDefault();
-    } else
-        alert ("Отправка разрешена");
-}
-let sendButton0 = document.form0.btn0;
-sendButton0.addEventListener("click", sendForm0);
+// //form0 login
+// function sendForm0(e){
+//     let keyBox = document.form0.input0;
+//     let val = keyBox.value;
+//     if(val.length<10){
+//         alert ("Недопустимая длина строки");
+//         document.form0.reset();
+//         e.preventDefault();
+//     } else
+//         alert ("Отправка разрешена");
+// }
+// let sendButton0 = document.form0.btn0;
+// sendButton0.addEventListener("click", sendForm0);
 
 //form1 comments
 function sendForm(e){
@@ -88,6 +93,9 @@ function onfocus1() {
     keyBox1.style.borderColor = "blue";
 }
 keyBox1.addEventListener("focus", onfocus1);
+
+
+
 
 //rating
 let rating = document.querySelector('.rating'),
