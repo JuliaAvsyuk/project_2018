@@ -1,17 +1,17 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 export class Header extends React.Component{
-    
     render(){
         return(
-            <nav className="navbar navbar-inverse">
-                <div className="container">
-                    <div className="navbar-header">
-                        <ul className="nav navbar-nav">
-                            <li><a href="#">About</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <div>
+                <ul className="nav nav-bar-nav">
+                    <li><NavLink to="/home">Home</NavLink></li>
+                    <li><NavLink to="/signIn">Sign In</NavLink></li>
+                    <li><NavLink to="/contacts">Contacts</NavLink></li>
+                    <li><NavLink to="/portfolio">Portfolio</NavLink></li>
+                </ul>
+            </div>
         );
     }
 }

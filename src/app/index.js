@@ -1,51 +1,54 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Home } from './components/Home';
-import { Header } from './components/Header';
-import { Portfolio } from './components/Portfolio';
-import { Contacts } from './components/Contacts';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-class App extends React.Component{
+import { Portfolio } from './components/Portfolio';
+import { Home } from './components/Home';
+import { SingIn } from './components/Sing In';
+import { Contacts } from './components/Contacts';
+import { Root } from './components/Root';
+import { Forms } from './components/Forms';
+
+class App extends React.Component {
+
+
     render(){
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-xs-3">
-                        <Home />
+            <div>
+                <Router>
+                    <div>
+                        <Root>
+                            <Switch>
+                                <Route exact path="/" component={Home} />
+                                <Route path="/portfolio" component={Portfolio} />
+                                <Route path="/signIn" component={SingIn} />
+                                <Route path="/contacts" component={Contacts} />
+                                <Route path="/home" component={Home} />
+                            </Switch>
+                        </Root>
                     </div>
-                    <div className="col-xs-3">
-                        <Header />
-                    </div>
-                    <div className="col-xs-3">
-                        <Portfolio />
-                    </div>
-                    <div className="col-xs-3">
-                        <Contacts />
-                    </div>
-                </div>
+                </Router>
             </div>
         );
     }
 }
+render(<App />,
+    document.getElementById("app"));
 
-render(
-   <App/>,
-    document.getElementById("app")
-);
 
-//form0 login
-function sendForm0(e){
-    let keyBox = document.form0.input0;
-    let val = keyBox.value;
-    if(val.length<10){
-        alert ("Недопустимая длина строки");
-        document.form0.reset();
-        e.preventDefault();
-    } else
-        alert ("Отправка разрешена");
-}
-let sendButton0 = document.form0.btn0;
-sendButton0.addEventListener("click", sendForm0);
+// //form0 login
+// function sendForm0(e){
+//     let keyBox = document.form0.input0;
+//     let val = keyBox.value;
+//     if(val.length<10){
+//         alert ("Недопустимая длина строки");
+//         document.form0.reset();
+//         e.preventDefault();
+//     } else
+//         alert ("Отправка разрешена");
+// }
+// let sendButton0 = document.form0.btn0;
+// sendButton0.addEventListener("click", sendForm0);
 
 //form1 comments
 function sendForm(e){
@@ -90,6 +93,9 @@ function onfocus1() {
     keyBox1.style.borderColor = "blue";
 }
 keyBox1.addEventListener("focus", onfocus1);
+
+
+
 
 //rating
 let rating = document.querySelector('.rating'),
