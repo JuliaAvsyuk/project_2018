@@ -10,9 +10,11 @@ export class Root extends React.Component {
                             <Header />
                         </div>
                 </nav>
-                    <div className="navbar-header">
-                        {this.props.children}
-                    </div>
+                <nav className="navbar">
+                        <div className="navbar-header">
+                            {this.props.children}
+                        </div>
+                </nav>
             </div>
         );
     }
