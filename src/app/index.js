@@ -19,6 +19,7 @@ class App extends React.Component {
                             <Route path="/portfolio" component={Portfolio} />
                             <Route path="/signIn" component={SingIn} />
                             <Route path="/contacts" component={Contacts} />
+                            <Route path="/home/" component={Home} />
                         </Switch>
                     </Root>
                 </div>
