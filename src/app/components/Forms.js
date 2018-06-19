@@ -3,10 +3,17 @@ import { render } from "react-dom";
 
 
 
-export class Forms extends React.Component{
+export class Forms extends React.Component {
+    constructor(){
+        super();
+        this.state={
+
+        };
+    }
+
 
     onSendForm0(){
-        let keyBox = document.form0.input0;
+        let keyBox = document.form0;
         let val = keyBox.value;
         if(val.length<6){
             alert ("Недопустимая длина строки");
@@ -28,5 +35,3 @@ export class Forms extends React.Component{
         );
     }
 }
-
-render(<Forms />, document.getElementById("form0"));

@@ -1,11 +1,15 @@
 import React from "react";
+import { Forms } from "./Forms";
+
 export class SingIn extends React.Component{
 
     render(){
         return(
-                    <div className="navbar-header">
-                        <h3>It's a Sign In page</h3>
-                    </div>
+            <div className="navbar navbar-inverse">
+                <div className="navbar-header">
+                    <Forms />
+                </div>
+            </div>
         );
     }
 }
