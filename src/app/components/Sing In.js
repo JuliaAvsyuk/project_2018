@@ -6,7 +6,7 @@ export class SingIn extends React.Component{
         return(
             <div className="navbar navbar-inverse">
                 <div className="navbar-header">
-                    <Forms />
+                    <Forms login="" password=""/>
                 </div>
             </div>
         );
