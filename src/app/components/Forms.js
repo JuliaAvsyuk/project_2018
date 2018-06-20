@@ -22,7 +22,14 @@ export class Forms extends React.Component {
 
     preSubmit(e){
         e.preventDefault();
-        alert("Login: " + this.state.log);
+        if(this.state.log.length <6) {
+            this.setState({
+                log: ""
+            });
+            alert("Not");
+
+        } else
+            alert("Yes");
     }
 
     render(){
