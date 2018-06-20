@@ -22,11 +22,11 @@ export class Forms extends React.Component {
     }
 
     validateLogin(login){
-        return login.length>=6;
+        return login.length>6;
     }
 
     validatePassword(password){
-        return password.length>=4;
+        return password.length>4;
     }
 
     onLoginChange(e){
