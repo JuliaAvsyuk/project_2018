@@ -10,8 +10,6 @@ import { Root } from './components/Root';
 import { Forms } from './components/Forms';
 
 class App extends React.Component {
-
-
     render(){
         return (
             <div>
@@ -35,29 +33,14 @@ class App extends React.Component {
 render(<App />,
     document.getElementById("app"));
 
-
-// //form0 login
-// function sendForm0(e){
-//     let keyBox = document.form0.input0;
-//     let val = keyBox.value;
-//     if(val.length<10){
-//         alert ("Недопустимая длина строки");
-//         document.form0.reset();
-//         e.preventDefault();
-//     } else
-//         alert ("Отправка разрешена");
-// }
-// let sendButton0 = document.form0.btn0;
-// sendButton0.addEventListener("click", sendForm0);
-
 //form1 comments
-function sendForm(e){
+function sendForm(){
     let keyBox = document.form1.input1;
     let val = keyBox.value;
     if(val.length<6){
         alert ("Недопустимая длина строки");
         document.form1.reset();
-        e.preventDefault();
+        event.preventDefault();
     } else 
         alert ("Отправка разрешена");
 }
@@ -68,7 +51,7 @@ sendButton.addEventListener("click", sendForm);
 //borderColor input1
 let keyBox = document.form1.input1;
 //обработка потери фокуса
-function onblur(e) {
+function onblur() {
     //получаем его значение и образаем все пробелы
     let text = keyBox.value.trim();
     if(text ==="")
