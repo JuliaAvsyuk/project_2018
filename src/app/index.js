@@ -31,8 +31,5 @@ class App extends React.Component {
     }
 }
 render(<App />,
-<<<<<<< HEAD
     document.getElementById("app"));
-=======
-    document.getElementById("app"));
->>>>>>> my_new_components_06_06
+
