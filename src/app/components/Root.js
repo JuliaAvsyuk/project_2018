@@ -7,7 +7,7 @@ export class Root extends React.Component {
         return (
             <div>
                 <nav>
-                    <div className="navbar navbar-inverse">
+                    <div className="navbar-fixed-top navbar navbar-inverse">
                         <div className="navbar-header">
                             <Header />
                         </div>
