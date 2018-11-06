@@ -5,19 +5,19 @@ body{
     background-attachment: fixed;
 }
 .home{
-    background-image: url(../assets/images/background/2.jpg);
+    background-image: url(assets/images/background/2.jpg);
 }
 .about{
-    background-image: url(../assets/images/background/4.jpg);
+    background-image: url(assets/images/background/4.jpg);
     background-size: 100% 100%;
 }
 .examples{
-    background-image: url(../assets/images/background/2.jpg);
+    background-image: url(assets/images/background/2.jpg);
     background-size: 100% 100%;
     color: white;
 }
 .contacts{
-    background-image: url(../assets/images/background/4.jpg);
+    background-image: url(assets/images/background/4.jpg);
     background-size: 100% 100%;
 }
 .foto{
@@ -28,7 +28,11 @@ body{
     color: white;
 }
 .footer{
+<<<<<<< HEAD
     font-size: 15px;
+=======
+    font-size: 20px;
+>>>>>>> 89616d0f69746c615bc60186b98f94b24a621c78
     color: white;
 }
 .rating{
