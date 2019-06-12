@@ -10,9 +10,4 @@ export class Home extends React.Component{
         );
     }
 }
-// Home.propTypes = {
-//     initialAge: PropTypes.number,
-//     name: PropTypes.string,
-//     greet: PropTypes.func,
-//     initialLinkName: PropTypes.string
-// };
+
